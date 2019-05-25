@@ -144,15 +144,8 @@
                                     function dr_module_search(name) {
                                         var url="{Router::search_url($params, ['keyword', 'zhxgm'], ['mykeyword', 'myzhxgm'])}";
                                         var keyword = $("#search_keyword").val();
-                                        var zhxgm_min = $("#zhxgm_min").val();
-                                        var zhxgm_max = $("#zhxgm_max").val();
-                                        zhxgm_max = zhxgm_max ? zhxgm_max : 0;
-                                        zhxgm_min = zhxgm_min ? zhxgm_min : 0;
-                                        if (zhxgm_max || zhxgm_min) {
-                                            url = url.replace('myzhxgm', zhxgm_min+','+zhxgm_max);
-                                        } else {
-                                            url = url.replace('myzhxgm', '');
-                                        }
+
+
                                         if (keyword) {
                                             url = url.replace('mykeyword', keyword);
                                         } else {
@@ -186,7 +179,7 @@
                         <div class="portlet-body search-container ">
                             <ul>
                                 <!--调用MOD_DIR模块的数据 id和total和order参数(本页面固有参数) page=1标示开启分页 urlrule分页地址规则 pagesize每页数量-->
-                                {search module=MOD_DIR id=$searchid total=$sototal order=$params.order catid=$catid page=1 pagesize=5 urlrule=$urlrule}
+                                {search module=MOD_DIR id=$searchid total=$sototal order=$params.order catid=$catid page=1 pagesize=1 urlrule=$urlrule}
                                 <li class="search-item clearfix">
                                     <a title="{$t.title}" href="{$t.url}">
                                         <img src="{dr_thumb($t.thumb, 100, 90)}" width="100" height="90" style="margin-top: 15px;">

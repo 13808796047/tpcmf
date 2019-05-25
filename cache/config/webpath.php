@@ -9,6 +9,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 return array (
     1 => array (
         'site' => '/home/vagrant/Code/tpcmf/',
-        'demo' => '/home/vagrant/Code/tpcmf/',
+        'plateform' => '/home/vagrant/Code/tpcmf/',
+        'pzpg' => '/home/vagrant/Code/tpcmf/',
     ),
 );

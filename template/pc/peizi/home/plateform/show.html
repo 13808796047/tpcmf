@@ -1,0 +1,1001 @@
+﻿{template "header.html"}
+<link type="text/css" rel="stylesheet" href="{HOME_THEME_PATH}web/css/style.css">
+<link type="text/css" rel="stylesheet" href="{HOME_THEME_PATH}web/css/detail.css">
+<link type="text/css" rel="stylesheet" href="{HOME_THEME_PATH}web/css/style-3.css">
+<script src="{HOME_THEME_PATH}web/js/echarts.min_1.js"></script>
+<div id="pz-content" style="padding: 20px 0;" class="__web-inspector-hide-shortcut__">
+    <!-- 面包屑 -->
+    <ul class="breadcrumb bnav">
+        <li>
+            <a href="?s=plateform&c=category&id=1">&nbsp;配资指数排名</a>&nbsp;&gt;
+        </li>
+        <li>
+            <a href="#">{$title}</a>
+        </li>
+    </ul>
+
+    <div class="content-norrap">
+        <div class="norrap-left">
+            <div class="slideTxtBox slideTxtBox1">
+                <div class="hd">
+                    <ul class="pz-tap">
+                        <li class="">平台信息</li>
+                        <li class="">工商信息</li>
+                        <li class="on">备案信息</li>
+                        <li class="">公司证件</li>
+                        <li class="">相关图片</li>
+                    </ul>
+                </div>
+                <div class="bd">
+                    <ul style="display: none;">
+                        <table class="dataintable">
+                            <tbody>
+                            <tr>
+                                <td style="background: #eeeeee;color: #666;font-weight: bold;width: 20%;">平台LOGO</td>
+                                <th style="width: 25%;">平台名称：</th>
+                                <td>{$title}</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="7" style="position: relative;">
+                                    <div class="shang-logo">
+                                        <a target="__blank" href="{$url}"><img alt="" src="{dr_thumb($thumb)}"></a>
+                                    </div>
+<!--                                    <img class="operate-state" src="http://peizizhishu.com/images/shipan.png">-->
+                                </td>
+                                <th>平台网址：</th>
+                                <td><a target="__blank"
+                                       href="{$ptwz}">{$ptwz}</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>其他网址：</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>主营业务：</th>
+                                <td>{$zyyw}</td>
+                            </tr>
+                            <tr>
+                                <th>所在地区：</th>
+                                <td>{dr_linkage('address', $csxz, 1, 'name')}/{dr_linkage('address', 99, $csxz, 'name')}/{dr_linkage('address', $csxz, 0, 'name')}</td>
+                            </tr>
+                            <tr>
+                                <th>办公地址：</th>
+                                <td>{$bgdz}</td>
+                            </tr>
+                            <tr>
+                                <th>上线时间：</th>
+                                <td>{$inputtime}</td>
+                            </tr>
+                            <tr>
+                                <th>客服热线：</th>
+                                <td>{$kfrx}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="chuo chuo1">{$peizizhishu}</div>
+                    </ul>
+                    <ul style="display: none;">
+                        <table class="dataintable">
+                            <tbody>
+                            <tr>
+                                <th>公司名称：</th>
+                                <td>{$gsmc}</td>
+                                <th>信用代码：</th>
+                                <td>{$xydm}</td>
+                            </tr>
+                            <tr>
+                                <th>经营状态：</th>
+                                <td>{$jyzt}</td>
+                                <th>法人代表：</th>
+                                <td>{$frdb}</td>
+                            </tr>
+                            <tr>
+                                <th>公司类型：</th>
+                                <td>{$gslx}</td>
+                                <th>成立日期：</th>
+                                <td>{$chengliriqi}</td>
+                            </tr>
+                            <tr>
+                                <th>注册资本：</th>
+                                <td>{$zhuceziben}</td>
+                                <th>注册地址：</th>
+                                <td>{$zhucedizhi}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </ul>
+                    <ul style="display: block;">
+                        <table class="dataintable">
+                            <tbody>
+                            <tr>
+                                <th>主办单位名称：</th>
+                                <td>{$zbdwxz}</td>
+                                <th>网站名称：</th>
+                                <td>{$wzmc}</td>
+                            </tr>
+                            <tr>
+                                <th>网站域名：</th>
+                                <td>{$wzym}</td>
+                                <th>网站备案：</th>
+                                <td>{$wzba}</td>
+                            </tr>
+                            <tr>
+                                <th>主办单位性质：</th>
+                                <td>{$zbdwxz}</td>
+                                <th>网站首页地址：</th>
+                                <td>{$wzsydz}</td>
+                            </tr>
+                            <tr>
+                                <th>网站负责人：</th>
+                                <td>{$wzfzr}</td>
+                                <th>审核时间：</th>
+                                <td>2017-05-11</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </ul>
+                    <ul style="padding: 10px; display: none;">
+                        <img data-action="zoom" src="{dr_thumb($gszj)}"
+                             style="width: 100%; cursor: -webkit-zoom-in;">
+                    </ul>
+                    <ul style="padding: 10px; display: none;">
+                        {loop $xgtp $value}
+                        <img data-action="zoom" src="{dr_thumb($value['file'])}"
+                             style="width: 24%; cursor: -webkit-zoom-in;">
+                        {/loop}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 平台简介 -->
+            <div class="news_list news_list2">
+                <div class="list_top">
+                    <div class="list_left list_left3">平台简介</div>
+                </div>
+                <div class="list-body list-body-padding">
+                    <p style="padding-left: 20px;">{$content}</p>
+                </div>
+            </div>
+            <!-- 相关曝光 -->
+            <div class="news_list news_list2">
+                <div class="list_top">
+                    <div class="list_left list_left3">相关曝光</div>
+                </div>
+                <div class="list-body">
+                    <ul class="yujing-list detail-yujing" style="border: none;margin: 0;">
+                        <li class="yujing-item">
+                            <a href="http://peizizhishu.com/warning_detail/21.html" target="_blank"><span
+                                    style="color:#000">曝光1:</span>&nbsp;&nbsp;（转）投资者爆料与越大投资发生配资纠纷 称300万元本金恐“打水漂”</a>
+                            <div class="yunjing-time">2018-12-10</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 配资信息 -->
+            <div class="news_list news_list2">
+                <div class="list_top list_top2">
+                    <div class="list_left list_left3">配资信息</div>
+                </div>
+                <div class="list-body list-body-padding" style="padding-left: 33px;">
+                    <p><span style="color: rgb(249, 150, 59);">{$keywords}</span></p>
+                </div>
+            </div>
+            <!-- 预警信息 -->
+            <!-- 平台体验 -->
+            <div class="news_list news_list2">
+                <div class="list_top list_top2">
+                    <div class="list_left list_left3">总结</div>
+                </div>
+                <div class="list-body list-body-padding" style="padding-left: 33px;">
+                    <p>“<span style="font-weight: bold;">{$description}&nbsp;</span><br></p>
+                    <p></p>
+                </div>
+            </div>
+            <!--调用ajax评论-->
+            {if IS_COMMENT}
+            {dr_module_comment(MOD_DIR, $id)}
+            {/if}
+            <!-- 我要评价 -->
+
+
+<!--            <div class="slideTxtBox slideTxtBox2">-->
+<!--                <div class="hd">-->
+<!--                    &lt;!&ndash; 下面是前/后按钮代码，如果不需要删除即可 &ndash;&gt;-->
+<!--                    <span class="arrow">-->
+<!--                            <a class="zuixin">有图</a>-->
+<!--                            <a class="zuixin" id="bad_evaluate">差评</a>-->
+<!--                            <a class="zuizao" id="good_evaluate">好评</a></span>-->
+<!--                    <ul>-->
+<!--                        <li class="on">全部评价</li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--                <div class="bd">-->
+<!--                    <ul class="ping-box" id="plateform_comments">-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-05-21 00:58</div>-->
+<!--                            <div class="mingzi">游客</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/mob_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：北京市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>中国有正常的配资平台吗？</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 合规是相对的 指的是 实盘 正常运营 信誉良好</div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-29 17:22</div>-->
+<!--                            <div class="mingzi">游客</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/pc_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：四川省成都市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>判断公司真假 就看公司给你提供的什么账户-->
+<!--                                只要是自己研发的交易软件百分之九十都是假的，还有百分之十不好判断。真的配资都是用证券公司交易账户</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 您说的非常有道理</div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-28 10:59</div>-->
+<!--                            <div class="mingzi">游客</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/mob_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：北京市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>官方回复是什么？这个查询配资平台公司全名叫什么呀？有知道的吗？</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 北京越大投资管理有限公司 现在已经暂停对外发配资业务了-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-27 22:10</div>-->
+<!--                            <div class="mingzi">游客</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/mob_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：北京市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>越大是线下配资吗？</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 是的</div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-27 13:42</div>-->
+<!--                            <div class="mingzi">simon</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/pc_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：北京市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>深圳前海趣操盘金融信息服务有限公司 这家是线上的 如果是越大的话 那可以玩玩 期待配资指数团队尽快搞清楚了，感谢。</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复：-->
+<!--                                        趣操盘那家平台，除了注册地址有些问题，目前处于正常状态。-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-27 13:14</div>-->
+<!--                            <div class="mingzi">simon</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/pc_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：北京市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>深圳前海趣操盘金融信息服务有限公司 是这家吗？这家是线上的。</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 对</div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-26 21:24</div>-->
+<!--                            <div class="mingzi">游客</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/mob_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：广东省中山市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>谢谢配资指数的全体工作人员，辛苦了！-->
+<!--                                希望你们有时间实地考察下越大投资另一家线下配资公司的情况，祝配资指数资源库平台越来越丰富！-->
+<!--                                希望贵公司把了解考察越大的信息公布在这里，多谢了！</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 您指的是趣操盘吧-->
+<!--                                        您的建议是对配资指数的支持，配资指数团队衷心感谢您的关注。-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-25 00:54</div>-->
+<!--                            <div class="mingzi">广东大蓝筹</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/mob_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：北京市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>我确实听过好像越大用另一家公司在做 还是线下配资 不过很靠谱 不存在跑路现象</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 谢谢提醒</div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-24 23:02</div>-->
+<!--                            <div class="mingzi">游客</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/mob_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：广东省中山市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>保证金门槛最低多少？</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 现在越大不发展新客户了 以另一家公司在做-->
+<!--                                        这两天我们考察一下-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-24 21:00</div>-->
+<!--                            <div class="mingzi">游客</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/mob_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：浙江省杭州市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>股民，提供的平台。及时收录，也给广大股民做一个参考。</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 感谢您的提醒</div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-24 20:55</div>-->
+<!--                            <div class="mingzi">游客</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/mob_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：浙江省杭州市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>米配资 钻石配资 财智配资，这几个平台收录下，给股民做一个参考。</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 感谢您的提供</div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-24 20:46</div>-->
+<!--                            <div class="mingzi">游客</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/mob_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：浙江省杭州市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>米配资 钻石配资 财智配资 这几个平台收录下，给股民做一个参考。</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 感谢提供</div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-24 20:34</div>-->
+<!--                            <div class="mingzi">游客</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/mob_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">-->
+<!--                                来自：浙江省杭州市移动-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>融畅汇丰 &nbsp; 最佳配资&nbsp;-->
+<!--                                金牛操盘-->
+<!--                                中豪配资 这几个平台，收录下。给股民做一个参考。</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 感谢提供</div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-24 00:27</div>-->
+<!--                            <div class="mingzi">游客</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/mob_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：浙江省杭州市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>聚宝盆-->
+<!--                                融畅汇丰 &nbsp; 最佳配资-->
+<!--                                宝尚配资 金牛操盘-->
+<!--                                中豪配资-->
+<!--                                &nbsp;</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复： 都是问题平台</div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="ping-item">-->
+<!--                            <div class="chuci">初次评价<br>19-04-20 21:32</div>-->
+<!--                            <div class="mingzi">游客</div>-->
+<!--                            <div style="position:absolute;right:20px;top:10px;"><img-->
+<!--                                    src="http://peizizhishu.com/images/mob_icon.png" style="vertical-align: text-top;">-->
+<!--                            </div>-->
+<!--                            <div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：江苏省南通市-->
+<!--                            </div>-->
+<!--                            <div class="ping-content"><p>APP在哪里下载？</p>-->
+<!--                                <div class="outline outline2">-->
+<!--                                    <div style="color:#9999ff;padding-right: 160px;">官方回复：-->
+<!--                                        越大配资是线下配资，近期不发展新客户，如需要可加官方微信。-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <ul style="margin: 20px auto;" class="yema">-->
+<!--                            <li class="pre-page" onclick="changePage(1)">上一页</li>-->
+<!--                            <li class="yema-on" onclick="changePage(1)">1</li>-->
+<!--                            <li onclick="changePage(2)">2</li>-->
+<!--                            <li onclick="changePage(3)">3</li>-->
+<!--                            <li class="next-page" onclick="changePage(2)">下一页</li>-->
+<!--                            <div class="clear_box"></div>-->
+<!--                        </ul>-->
+<!--                    </ul>-->
+
+<!--                    <div id="pagination" style="display: none;"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+
+        </div>
+        <div class="norrap-right">
+            <!-- 第三个搜索框 -->
+            <div class="third-form-box">
+                <form method="get" action="http://peizizhishu.com/plateform">
+                    <input class="seach-words" type="text" name="wd" value="" placeholder="输入平台名称搜索">
+                    <input class="seach-btn" type="submit" value="&nbsp;&nbsp;&nbsp;&nbsp;">
+                    <input type="hidden" name="search_token"
+                           value="eyJpdiI6InJxMit6aUFQSGdrdXJlNE9pZXlaalE9PSIsInZhbHVlIjoiUzA2cDh1V3oyangrY3hHeEN0ZVduZ0dnd1wvbjhOZnljVjhteFZtbm55b1NVOE54YlwvR0xVTDRQVklsM2dxc3RiIiwibWFjIjoiZTY3N2U1OWQ3NWI2ZmM1NjcyZDE0YTQ5YzRhYzA1Y2E0MDIxNmFlM2E3Zjg1ZjA4OGNlOTc2ZDA5NWY4ZmQ3ZSJ9">
+                    <ul class="input-prompt">
+                        <li>无查询结果</li>
+                    </ul>
+                </form>
+            </div>
+
+            <a href="/commit_report?plateform_id=261" class="jubao-btn"><img
+                    src="http://peizizhishu.com/images/jubao.jpg"></a>
+
+            <div class="tool-main">
+                <div class="tool toolb-right">
+                    <a href="http://www.gsxt.gov.cn" rel="nofollow" target="_blank">
+                        <i class="tool-sign tool-gs" style=""></i>
+                        <span class="tool-title" style="">工商查询</span>
+                    </a>
+                </div>
+                <div class="tool toolb-right">
+                    <a href="http://zxgk.court.gov.cn/zhzxgk/index.html" rel="nofollow" target="_blank">
+                        <i class="tool-sign tool-sx"></i>
+                        <span class="tool-title" style="">失信查询</span>
+                    </a>
+                </div>
+                <div class="tool toolb-right">
+                    <a href="http://zhixing.court.gov.cn/search/" rel="nofollow" target="_blank">
+                        <i class="tool-sign tool-zx"></i>
+                        <span class="tool-title" style="">执行查询</span>
+                    </a>
+                </div>
+                <div class="tool">
+                    <a href="http://www.beian.miit.gov.cn/publish/query/indexFirst.action" rel="nofollow noreferrer">
+                        <i class="tool-sign tool-ban"></i>
+                        <span class="tool-title" style="">备案查询</span>
+                    </a>
+                </div>
+            </div>
+
+            <!--配资指数预警 -->
+            <ul id="news_box" class="news_box" style="border: 1px solid #ddd;padding-bottom:0;">
+                <li class="list-item">
+                    <div class="enpty_box">
+                        <div class="news_list">
+                            <div class="list_top">
+                                <div class="list_left list_left2">配资指数曝光</div>
+                                <div class="list_right"><a href="/warning">更多&gt;&gt;</a></div>
+                            </div>
+                            <ul class="list_bottom list_bottom2">
+                                <li class="list_bottom_item">
+                                    <div class="serial">1</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/warning_detail/89.html">宝牛E配（bn016.com）通过配资指数官方公示的维权群，已聚集56位受骗人。（由该群人员提供）</a>
+                                </li>
+                                <li class="list_bottom_item">
+                                    <div class="serial">2</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/warning_detail/88.html">手机尾号98的某先生，在操盘联盟
+                                        pz8.com.cn 配资被骗40万，现已向警方报案。（当事人提供）</a>
+                                </li>
+                                <li class="list_bottom_item">
+                                    <div class="serial">3</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/warning_detail/87.html">手机尾号56的某先生，在(3G配资
+                                        3gpz.com)平台被骗本金及盈利58073元。（当事人提供）</a>
+                                </li>
+                                <li class="list_bottom_item">
+                                    <div class="serial">4</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/warning_detail/85.html">手机尾号23的某女士，对上上策（www.shangshang8.com）配资平台提出的质疑。</a>
+                                </li>
+                                <li class="list_bottom_item">
+                                    <div class="serial">5</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/warning_detail/83.html">手机尾号06的女士，在（互盈策略
+                                        hycl588.com）配资，被骗近数万元本金。（当事人提供）</a>
+                                </li>
+                                <li class="list_bottom_item">
+                                    <div class="serial">6</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/warning_detail/82.html">手机尾号36的先生，在（操盘联盟
+                                        pz8.com.cn）配资，被骗近4万元。（当事人现已报案）</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- 清除浮动盒子-->
+                <div class="clear_box"></div>
+            </ul>
+
+            <!--配资最新评价 -->
+            <ul id="news_box" class="news_box" style="border: 1px solid #ddd;padding-bottom:0;">
+                <li class="list-item">
+                    <div class="enpty_box">
+                        <div class="news_list">
+                            <div class="list_top">
+                                <div class="list_left list_left2">配资最新评价</div>
+                                <div class="list_right"><a href="/plateform">更多&gt;&gt;</a></div>
+                            </div>
+                            <ul class="list_bottom list_bottom2">
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">1</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/808.html"><em
+                                            style="color: #ffb973;">游客</em>
+                                        <img src="http://peizizhishu.com/images/mob_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于5小时前前点评<em style="color: #9999ff;">国融汇通</em></a>
+                                    <p>不是误导，我会持续跟进 。出不了金了我会在这里说。总之这个台子管理混乱 你现在就是想注册你都找不到人</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/808.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">2</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/820.html"><em
+                                            style="color: #ffb973;">游客</em>
+                                        <img src="http://peizizhishu.com/images/pc_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于7小时前前点评<em style="color: #9999ff;">巨牛赢家</em></a>
+                                    <p>虚假平台 存在推荐股票操作的是问题平台，所谓的交割单也均为造假，</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/820.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">3</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/630.html"><em
+                                            style="color: #ffb973;">海珠股民</em>
+                                        <img src="http://peizizhishu.com/images/pc_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于8小时前前点评<em style="color: #9999ff;">兴业配资</em></a>
+                                    <p>兴业配资是虚拟盘，4月24日提现时不能提现，朋友也在那配资也不能提现了，客服一直用资金清算作借口，现在客服都没有反应了，不理了。</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/630.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">4</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/163.html"><em
+                                            style="color: #ffb973;">wxh126</em>
+                                        <img src="http://peizizhishu.com/images/pc_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于10小时前前点评<em style="color: #9999ff;">鼎牛配资</em></a>
+                                    <p>可以要求平台提供交割单吗</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/163.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">5</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/808.html"><em
+                                            style="color: #ffb973;">游客</em>
+                                        <img src="http://peizizhishu.com/images/mob_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于11小时前前点评<em style="color: #9999ff;">国融汇通</em></a>
+                                    <p>这个台子挺任性的 平台非公开注册 联系业务员开好账户基本就不理你了 你爱玩玩 不玩走 出金还是正常</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/808.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">6</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/602.html"><em
+                                            style="color: #ffb973;">滥情</em>
+                                        <img src="http://peizizhishu.com/images/pc_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于11小时前前点评<em style="color: #9999ff;">融可赢</em></a>
+                                    <p>
+                                        这个和之前关闭的恒日生是一样的配资，虽然不是实盘，测试过，但是他比其他虚拟盘好一些，就是如果你买到了冷门股或者低价股这种虚拟盘会有很大的优势，因为它的价格打到那个价位如果你正好挂在那，就算只有一手买单上去，你也会成交的，低吸亦然不用管那个价位有多少挂单因为这个软件不是实盘，有些虚拟盘确实必须把那个价位全都吃掉你才会成交，先手在低价股很重要，一分钱就有好多利呢，当然对于虚拟盘别配资太多，少一点玩玩还是可以的，注意风向不对赶紧跑</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/602.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">7</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/724.html"><em
+                                            style="color: #ffb973;">池州股民</em>
+                                        <img src="http://peizizhishu.com/images/pc_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于1天前前点评<em style="color: #9999ff;">聚宝盆 / 精算策略配资平台 / 策略资本配资平台</em></a>
+                                    <p>所有配资平台都用这个女的客服形象，不侵权吗？</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/724.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">8</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/641.html"><em
+                                            style="color: #ffb973;">杭州股民</em>
+                                        <img src="http://peizizhishu.com/images/pc_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于1天前前点评<em style="color: #9999ff;">申捷策略</em></a>
+                                    <p>配资的话，真得及时查你们配资指数，平台什么情况，你们这边第一时间就反映了，本来还想选他家呢，公司都经营异常了，后怕中.</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/641.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">9</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/31.html"><em
+                                            style="color: #ffb973;">游客</em>
+                                        <img src="http://peizizhishu.com/images/pc_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于1天前前点评<em style="color: #9999ff;">闪牛</em></a>
+                                    <p>做了几个月，感觉还可以</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/31.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">10</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/589.html"><em
+                                            style="color: #ffb973;">游客</em>
+                                        <img src="http://peizizhishu.com/images/pc_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于1天前前点评<em style="color: #9999ff;">上上策</em></a>
+                                    <p>真不知道下面评论虚拟盘的用过没有，你看看你买入和卖出的单子，再对比同花顺level2，不就知道了么，反正我每次买入和卖出，基本都对过，是符合的</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/589.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">11</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/309.html"><em
+                                            style="color: #ffb973;">游客</em>
+                                        <img src="http://peizizhishu.com/images/pc_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于1天前前点评<em style="color: #9999ff;">配多多</em></a>
+                                    <p>就是模拟账户，千万别相信了，这家骗子公司，出事情是迟早的事情，骗子公司出问题是迟早的事情的！千万别配资了，这就是一家骗子公司！</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/309.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">12</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/760.html"><em
+                                            style="color: #ffb973;">游客</em>
+                                        <img src="http://peizizhishu.com/images/pc_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于1天前前点评<em style="color: #9999ff;">股巢网</em></a>
+                                    <p>去过他们公司朋友，他们规模怎么样，正不正规？</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/760.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">13</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/760.html"><em
+                                            style="color: #ffb973;">游客</em>
+                                        <img src="http://peizizhishu.com/images/pc_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于1天前前点评<em style="color: #9999ff;">股巢网</em></a>
+                                    <p>做配资的话还是要去实体公司自己考察一番才比较放心，不能凭空就说配资公司的不好。</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/760.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">14</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/189.html"><em
+                                            style="color: #ffb973;">游客</em>
+                                        <img src="http://peizizhishu.com/images/mob_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于1天前前点评<em style="color: #9999ff;">鑫配网</em></a>
+                                    <p>其实配资吧，都是需要大家自己去实地考察的，而不是偏听偏信，别人说一点风就是雨。个人觉得要去公司实体考察一下。</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/189.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                                <li class="list_bottom_item list_bottom_item2">
+                                    <div class="serial">15</div>
+                                    <a style="width: 100%;" href="http://peizizhishu.com/plateform_detail/262.html"><em
+                                            style="color: #ffb973;">游客</em>
+                                        <img src="http://peizizhishu.com/images/mob_icon.png"
+                                             style="vertical-align: middle;height:14px">
+
+                                        于1天前前点评<em style="color: #9999ff;">永之胜操盘</em></a>
+                                    <p>有在这平台操作的兄弟知乎一下，会跑路吗？亏了自认倒霉，水平不行。但被诈骗就冤了！</p>
+                                    <a href="http://peizizhishu.com/plateform_detail/262.html" class="ping-detail">详情&gt;&gt;</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- 清除浮动盒子-->
+                <div class="clear_box"></div>
+            </ul>
+        </div>
+        <div class="clear_box"></div>
+    </div>
+</div>
+<script type="text/javascript" defer="defer" src="{HOME_THEME_PATH}web/js/zooming.min_1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //tab切换
+        $(".slideTxtBox1").slide({});
+        //全部评价和追评切换
+        $(".slideTxtBox2").slide({trigger: "click"});
+
+        $('input:radio[name="comment_evaluate"]').change(function () {
+            $('.pro-msg').hide()
+        });
+
+        $('#plateformCommentStore').click(function () {
+
+
+            var list = $('input:radio[name="comment_evaluate"]:checked').val();
+            if (list == null) {
+                // alert("请选中好评或者差评!");
+                $('.pro-msg').show()
+                return false;
+            }
+
+
+            var commentData = $('#plateformCommentForm').serialize();
+            $.post('/plateform_ajax_comment', commentData, function (res) {
+                if (res.code === 'success') {
+                    alert('评价成功');
+                    $('#plateformCommentForm')[0].reset();
+                    getPlateformComments();
+                } else {
+                    alert(res.msg);
+                }
+            });
+        });
+
+        var commentImages = [];
+
+        $('#uploadImage').bind('input propertychange', function () {
+            var files = $(this).context.files;
+            for (var i = files.length - 1; i >= 0; i--) {
+
+                if (commentImages.length >= 5) {
+                    alert('最多上传五张图片');
+                    return;
+                }
+
+                upload(files[i], i);
+            }
+        });
+
+
+        function upload(file, index) {
+            var formData = new FormData()
+
+            formData.append('file', file);
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '/files_upload');
+            let token = document.head.querySelector('meta[name="csrf-token"]');
+            if (token) {
+                xhr.setRequestHeader('X-CSRF-TOKEN', token.content);
+            } else {
+                alert('上传失败, 请刷新浏览器后重试');
+            }
+
+            xhr.upload.onprogress = function (e) {
+                if (e.lengthComputable) {
+                    var percentComplete = (e.loaded / e.total) * 100;
+                    uploadBtnName = "(" + percentComplete.toFixed(2) + '% )';
+                    $('#comment_images_count').text(commentImages.length + uploadBtnName);
+                }
+            };
+
+            xhr.onreadystatechange = function (e) {
+                if (xhr.readyState == 4) {
+                    var ret = JSON.parse(xhr.responseText);
+                    if (ret.code === 'success') {
+                        commentImages.push(ret.data);
+                        $('input[name="comment_images"]').val(JSON.stringify(commentImages));
+                        $('#comment_images_count').text(commentImages.length);
+                    }
+                }
+            };
+
+            xhr.send(formData);
+
+        }
+
+        var plateform_comment_filters = {};
+
+        function comHtml(lists, pagination) {
+            if (lists.length <= 0) {
+                $('#plateform_comments').html('<li><div class="empty">未查找到相关评论</div></li>');
+                return;
+            }
+
+            var html = '';
+            for (let index = 0; index < lists.length; index++) {
+                const element = lists[index];
+                html += '<li class="ping-item">';
+                html += '<div class="chuci">初次评价<br>' + element.created_at + '</div>';
+                html += '<div class="mingzi">' + element.comment_author_msg + '</div>';
+                if (element.comment_weight != 0) {
+                    html += '<div class="zhiding"><img src="picture/zhiding_1.png" alt=""></div>';
+                }
+
+                html += '<div style="position:absolute;right:20px;top:10px;">';
+                if (element.comment_code == 0) {
+                    html += '<img src="picture/pc_icon_1.png" style="vertical-align: text-top;" />';
+                } else if (element.comment_code == 1) {
+                    html += '<img src="picture/mob_icon_1.png"  style="vertical-align: text-top;" />';
+                }
+
+                html += '</div>';
+                if (element.comment_ip_text.length > 0) {
+                    html += '<div style="position: absolute;right: 20px;top: 39px;color: #CCC;font-size:11px">来自：' + element.comment_ip_text + '</div>';
+                }
+                html += '<div class="ping-content">';
+                html += '<p>' + element.comment_content + '</p>';
+                if (element.comment_images != undefined && element.comment_images != '') {
+                    html += '<div class="ping-imgs">';
+                    for (let index = 0; index < element.comment_images.length; index++) {
+                        html += '<img data-action="zoom" src="' + element.comment_images[index].url + '" alt="">';
+                    }
+
+                    html += '</div>';
+                }
+                html += '<div class="outline outline2">';
+                /*
+                    html += '<span>配资成本：<em>'+ (element.stock_rate == undefined ? '-' :  element.stock_rate) +'</em></span>';
+                    html += '<span>提现速度：<em>'+(element.withdrawal_speed == undefined ? '-' :  element.withdrawal_speed)+'</em></span>';
+                    html += '<span>平台服务：<em>'+(element.service_rate == undefined ? '-' :  element.service_rate)+'</em></span>';
+                */
+                if (element.comment_remark != undefined && element.comment_remark != '') {
+                    html += '<div style="color:#9999ff;padding-right: 160px;">官方回复： ' + element.comment_remark + ' </div>';
+                }
+                html += '</div>';
+                html += '</div>';
+                html += '</div>';
+                html += '</li>';
+            }
+
+
+            html += getPageBar(pagination);
+
+            $('#plateform_comments').html(html);
+
+            //绑定事件
+            $('#bad_evaluate').click(function () {
+                plateform_comment_filters.comment_model_id = 308
+                plateform_comment_filters.comment_evaluate = 1;
+                return $.ajax({
+                    url: '/plateform_ajax_comments',
+                    type: 'get',
+                    dataType: 'json',
+                    data: plateform_comment_filters,
+                    success: function (res) {
+                        console.log(res.data.lists);
+                        comHtml(res.data.lists, res.data.pagination);
+                    }
+                });
+            });
+
+            $('#good_evaluate').click(function () {
+                plateform_comment_filters.comment_model_id = 308
+                plateform_comment_filters.comment_evaluate = 0;
+                return $.ajax({
+                    url: '/plateform_ajax_comments',
+                    type: 'get',
+                    dataType: 'json',
+                    data: plateform_comment_filters,
+                    success: function (res) {
+                        console.log(res.data.lists);
+                        comHtml(res.data.lists, res.data.pagination);
+                    }
+                });
+            })
+        }
+
+        function getPlateformComments() {
+            plateform_comment_filters.comment_model_id = 308
+            return $.ajax({
+                url: '/plateform_ajax_comments',
+                type: 'get',
+                dataType: 'json',
+                data: plateform_comment_filters,
+                success: function (res) {
+                    comHtml(res.data.lists, res.data.pagination);
+                }
+            });
+        }
+
+
+        window.changePage = function (page) {
+            plateform_comment_filters.page = page;
+            getPlateformComments();
+        }
+
+        function getPageBar(pagination) {
+            var totalPage = Math.ceil(pagination.total / pagination.per_page);
+            if (totalPage <= 1) return '';
+            html = '<ul style="margin: 20px auto;" class="yema">';
+            html += '<li class="pre-page" onclick="changePage(' + pagination.prev_page + ')">上一页</li>';
+            for (var index = 1; index <= totalPage; index++) {
+                if (pagination.page === index) {
+                    html += '<li class="yema-on" onclick="changePage(' + index + ')">' + index + '</li>';
+                } else {
+                    html += '<li onclick="changePage(' + index + ')">' + index + '</li>';
+                }
+            }
+            html += '<li class="next-page" onclick="changePage(' + pagination.next_page + ')">下一页</li>';
+            html += '<div class="clear_box"></div>';
+            html += '</ul>';
+
+            return html;
+        }
+
+        getPlateformComments();
+
+
+        // 输入提示
+        $(".seach-words").keyup(function () {
+            var wd = $('input[name="wd"]').val();
+            if (wd.length <= 0) {
+                $(".input-prompt").css("display", "none");
+            } else {
+
+                $(".input-prompt").css("display", "block");
+
+                $(".input-prompt").html("<li>正在查询中...</li>");
+                $.ajax({
+                    url: "http://peizizhishu.com/search_refer",
+                    data: {
+                        "wd": $('input[name="wd"]').val(),
+                        "column": 'plateform_name'
+                    },
+                    success(ret) {
+                        if (ret.data.length <= 0) {
+                            $(".input-prompt").html("<li>无查询结果</li>");
+                        } else {
+                            var html = '';
+                            for (let index = 0; index < ret.data.length; index++) {
+                                const element = ret.data[index];
+                                html += '<a href="/plateform?wd_id=' + element.id + '&wd=' + element.text + '&search_token=eyJpdiI6InhYZHowVnRYVXJ2cDBLbnpDNFwvSW9BPT0iLCJ2YWx1ZSI6InVQRXo0NUNiXC9kMGt0ZnE1WGhYcnhUWmFLNWJ2T1hsQ0h2dUlxSTZnaHhEaTNEZW9BSmtCTGlCa21VNlhyYUVNIiwibWFjIjoiYjllZmFjZWEyYzJmZWE0NDJhYzU5ZDhmYzk2ZTAyYmI0YTY5NzFiYzJiZWFkZDkyMzhiMTYxZDNhNWZkNTQzYyJ9"><li>' + element.display + '</li></a>';
+                            }
+                            $(".input-prompt").html(html);
+                        }
+                    }
+                });
+            }
+        });
+
+
+    });
+</script>
+
+{template "footer.html"}
+
+
+
+
+

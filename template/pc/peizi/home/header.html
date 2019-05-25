@@ -6,6 +6,17 @@
     <meta name="description" content="{$meta_description}">
     <title>{$meta_title}</title>
     <link type="text/css" rel="stylesheet" href="{HOME_THEME_PATH}web/css/style_1.css">
+    <!-- 系统关键js(所有自建模板必须引用) -->
+    <script type="text/javascript">var assets_path = '{THEME_PATH}assets/';var is_mobile_cms = '{IS_MOBILE}';</script>
+    <script src="{LANG_PATH}lang.js" type="text/javascript"></script>
+    <script src="{THEME_PATH}assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="{THEME_PATH}assets/layer/layer.js" type="text/javascript"></script>
+    <script src="{THEME_PATH}assets/js/cms.js" type="text/javascript"></script>
+<!--    <script type="text/javascript" src="{HOME_THEME_PATH}web/js/jquery1.42.min_1.js"></script>-->
+
+    <script type="text/javascript" src="{HOME_THEME_PATH}web/js/jquery.superslide.2.1.1_1.js"></script>
+    <script type="text/javascript" src="{HOME_THEME_PATH}web/js/jquery.basictable.min_1.js"></script>
+    <script type="text/javascript" defer="defer" src="{HOME_THEME_PATH}web/js/common_1.js"></script>
 </head>
 <body>
 <!-- header和nav区域 -->
@@ -23,7 +34,12 @@
             <h3><a href="{SITE_URL}" title="{SITE_TITLE}">首页</a></h3>
         </li>
         {category module=share pid=0}
-        <li class="nLi {if IS_SHARE && in_array($catid, $t.catids)} on{/if}">
+        <li class="nLi {if IS_SHARE && in_array($catid, $t.catids)} on {/if}">
+            <h3><a href="{$t.url}">{$t.name}</a></h3>
+        </li>
+        {/category}
+        {category module=plateform id=1}
+        <li class="nLi {if IS_SHARE && in_array($catid, $t.catids)} on {/if}">
             <h3><a href="{$t.url}">{$t.name}</a></h3>
         </li>
         {/category}
