@@ -1,1 +1,1 @@
-null
+{"ceshi":{"id":"1","name":"\u6d4b\u8bd5","table":"ceshi","setting":{"list_field":[]},"field":{"title":{"id":"176","name":"\u4e3b\u9898","fieldname":"title","fieldtype":"Text","relatedid":"1","relatedname":"form-1","isedit":"1","ismain":"1","issystem":"1","ismember":"1","issearch":"1","disabled":"0","setting":{"option":{"width":300,"fieldtype":"VARCHAR","fieldlength":"255"},"validate":{"xss":1,"required":1}},"displayorder":"0"}}}}

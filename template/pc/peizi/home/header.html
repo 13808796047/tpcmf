@@ -26,9 +26,16 @@
             <img src="{SITE_LOGO}" alt="{SITE_NAME}">
         </a>
         <div class="nav-login">
+            {if $member}
+            <img class="login-img" src="{dr_avatar($member.avatar)}">
+            <a href="javascript:;">{$member.username}</a> |
+            <a href="javascript:dr_loginout('退出成功');">退出</a>
+            {else}
             <img class="login-img" src="{HOME_THEME_PATH}web/picture/login_img_1.png"/>
             <a class="login" href="javascript:;">登录</a>|
             <a class="reg" href="javascript:;">注册</a>|
+            {/if}
+
         </div>
         <li class="nLi {if $indexc}on{/if}">
             <h3><a href="{SITE_URL}" title="{SITE_TITLE}">首页</a></h3>

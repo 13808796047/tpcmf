@@ -236,3 +236,107 @@ ERROR - 2019-05-26 15:39:06 --> 你没有定义字段列表回调函数：
 ERROR - 2019-05-26 15:48:44 --> 你没有定义字段列表回调函数：
 ERROR - 2019-05-26 15:48:44 --> 你没有定义字段列表回调函数：
 ERROR - 2019-05-26 15:48:44 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 21:55:46 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:19 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:09:29 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:10:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:17:15 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+ERROR - 2019-05-26 22:22:53 --> 你没有定义字段列表回调函数：
+CRITICAL - 2019-05-26 22:35:16 --> Call to a member function mform_show_url() on null
+#0 /home/vagrant/Code/tpcmf/dayrui/Fcms/Core/View.php(194): include()
+#1 /home/vagrant/Code/tpcmf/dayrui/Core/Controllers/Home.php(37): Phpcmf\View->display('index.html')
+#2 /home/vagrant/Code/tpcmf/dayrui/Core/Controllers/Home.php(76): Phpcmf\Controllers\Home->_index()
+#3 /home/vagrant/Code/tpcmf/dayrui/System/CodeIgniter.php(838): Phpcmf\Controllers\Home->index()
+#4 /home/vagrant/Code/tpcmf/dayrui/System/CodeIgniter.php(335): CodeIgniter\CodeIgniter->runController(Object(Phpcmf\Controllers\Home))
+#5 /home/vagrant/Code/tpcmf/dayrui/System/CodeIgniter.php(245): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/vagrant/Code/tpcmf/dayrui/Fcms/Init.php(304): CodeIgniter\CodeIgniter->run()
+#7 /home/vagrant/Code/tpcmf/index.php(38): require('/home/vagrant/C...')
+#8 {main}
+CRITICAL - 2019-05-26 22:53:30 --> Call to a member function mform_show_url() on null
+#0 /home/vagrant/Code/tpcmf/dayrui/Fcms/Core/View.php(194): include()
+#1 /home/vagrant/Code/tpcmf/dayrui/Core/Controllers/Home.php(37): Phpcmf\View->display('index.html')
+#2 /home/vagrant/Code/tpcmf/dayrui/Core/Controllers/Home.php(76): Phpcmf\Controllers\Home->_index()
+#3 /home/vagrant/Code/tpcmf/dayrui/System/CodeIgniter.php(838): Phpcmf\Controllers\Home->index()
+#4 /home/vagrant/Code/tpcmf/dayrui/System/CodeIgniter.php(335): CodeIgniter\CodeIgniter->runController(Object(Phpcmf\Controllers\Home))
+#5 /home/vagrant/Code/tpcmf/dayrui/System/CodeIgniter.php(245): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/vagrant/Code/tpcmf/dayrui/Fcms/Init.php(304): CodeIgniter\CodeIgniter->run()
+#7 /home/vagrant/Code/tpcmf/index.php(38): require('/home/vagrant/C...')
+#8 {main}

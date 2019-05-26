@@ -26,9 +26,16 @@
             <img src="<?php echo SITE_LOGO; ?>" alt="<?php echo SITE_NAME; ?>">
         </a>
         <div class="nav-login">
+            <?php if ($member) { ?>
+            <img class="login-img" src="<?php echo dr_avatar($member['avatar']); ?>">
+            <a href="javascript:;"><?php echo $member['username']; ?></a> |
+            <a href="javascript:dr_loginout('退出成功');">退出</a>
+            <?php } else { ?>
             <img class="login-img" src="<?php echo HOME_THEME_PATH; ?>web/picture/login_img_1.png"/>
             <a class="login" href="javascript:;">登录</a>|
             <a class="reg" href="javascript:;">注册</a>|
+            <?php } ?>
+
         </div>
         <li class="nLi <?php if ($indexc) { ?>on<?php } ?>">
             <h3><a href="<?php echo SITE_URL; ?>" title="<?php echo SITE_TITLE; ?>">首页</a></h3>

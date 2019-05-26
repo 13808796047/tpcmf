@@ -42,17 +42,17 @@
 <!-- 登录框 -->
 <div class="bac_box" style="display: none;"></div>
 <div class="alert_pop_box alert_pop_login" style="display: none;">
-    <form id="loginForm" method="post" action="http://peizizhishu.com/login" class="pz-form">
-        <input type="hidden" name="_token" value="jq23hr9oNXg8g18C4jViNVl5LHZo29OVGXOhYCBV">
+    <form id="myform" method="post" class="pz-form">
+        {$form}
         <div class="pz-form-title">
             <div class="title-text">登录</div>
         </div>
         <p id="loginFormError" style="color: chocolate;display:none">用户名或密码错误</p>
         <label>
-            <input class="pz-input pz-username" type="text" name="loginid" placeholder="用户名"/>
+            <input class="pz-input pz-username" type="text" placeholder="账号/邮箱/手机" name="data[username]"/>
         </label>
         <label>
-            <input class="pz-input pz-password" type="password" name="password" value="" placeholder="密码"/>
+            <input class="pz-input pz-password" type="password" placeholder="登录密码" name="data[password]"/>
         </label>
         <div class="pz-form-other">
             <div class="pz-rember"><input style="vertical-align: top;" type="checkbox" name="rember"/>&nbsp;&nbsp;记住密码
@@ -61,7 +61,7 @@
             <div class="clear_box"></div>
         </div>
         <label>
-            <button id="loginSubmit" class="pz-input pz-submit" type="button">立即登录</button>
+            <button class="pz-input pz-submit" type="button" onclick="dr_ajax_member('/index.php?s=member&c=login&m=index', 'myform');">立即登录</button>
         </label>
         <a href="javascript:void(0)" class="pz-colse">x</a>
     </form>
@@ -70,27 +70,38 @@
 <!-- 注册框 -->
 <div class="bac_box" style="display: none;"></div>
 <div class="alert_pop_box alert_pop_register" style="display: none;">
-    <form id="registerForm" method="post" action="http://peizizhishu.com/register" class="pz-form">
-        <input type="hidden" name="_token" value="jq23hr9oNXg8g18C4jViNVl5LHZo29OVGXOhYCBV">
+    <form id="registerform" method="post"  class="pz-form">
+        {$form}
         <div class="pz-form-title">
             <div class="title-text">注册</div>
         </div>
         <p id="registerFormError" style="color: chocolate;display:none"></p>
         <label>
-            <input class="pz-input pz-username" type="text" name="username" placeholder="用户名"/>
+
+            <input class="pz-input pz-username" type="text" name="data[username]" placeholder="用户名"/>
+
         </label>
         <label>
-            <input class="pz-input pz-username" type="text" name="mobile" placeholder="手机号"/>
+
+            <input class="pz-input pz-username" type="text" name="data[phone]" placeholder="手机号"/>
+
         </label>
         <label>
-            <input class="pz-input pz-password" type="password" name="password" value="" placeholder="密码"/>
+            <input class="pz-input pz-password" type="password" name="data[password]" value="" placeholder="密码"/>
         </label>
         <label>
-            <input class="pz-input pz-password" type="password" name="password_confirmation" value=""
+            <input class="pz-input pz-password" type="password" name="data[password2]" value=""
                    placeholder="确认密码"/>
         </label>
         <label>
-            <button id="registerSubmit" class="pz-input pz-submit" type="button">立即注册</button>
+            <button  class="pz-input pz-submit" type="button" onclick="dr_ajax_member('/index.php?s=member&c=register&m=index', 'registerform');">立即注册</button>
+        </label>
+        <label class="mt-checkbox mt-checkbox-outline" style="margin-left:20px;">
+            <input type="checkbox" name="is_protocol" value="1" checked> 我已阅读并同意
+            <span></span>
+        </label>
+        <label>
+            <a href="javascript:dr_show_protocol();">《用户注册协议》</a>
         </label>
         <a href="javascript:void(0)" class="pz-colse">x</a>
     </form>
