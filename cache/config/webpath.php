@@ -11,5 +11,6 @@ return array (
         'site' => '/home/vagrant/Code/tpcmf/',
         'plateform' => '/home/vagrant/Code/tpcmf/',
         'pzpg' => '/home/vagrant/Code/tpcmf/',
+        'point' => '/home/vagrant/Code/tpcmf/',
     ),
 );

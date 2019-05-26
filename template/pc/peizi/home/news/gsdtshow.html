@@ -1,0 +1,46 @@
+{template "header.html"}
+<link rel="stylesheet" href="{HOME_THEME_PATH}web/css/detail.css">
+<link rel="stylesheet" href="{HOME_THEME_PATH}web/css/style-3.css">
+<link rel="stylesheet" href="{HOME_THEME_PATH}web/css/style-4.css">
+<div style="background: #fff;">
+    <div id="pz-content" style="padding: 20px 0;">
+        <div class="mingci-box">
+            <ul class="breadcrumb bnav">
+                <li>
+                    <a href="#">&nbsp;公司动态</a>&nbsp;&gt;
+                </li>
+                <li>
+                    <a href="javascript:;">&nbsp;{$title}</a>
+                </li>
+            </ul>
+
+            <div class="norrap-left" style="float:none">
+
+                <div class="article-box" style="margin-top: 20px;">
+                    <div class="article-title">{$title}
+                        <div class="article-msg">{$inputtime}&nbsp;&nbsp;<span class="article-author">作者：{$author}</span></div>
+                        <div class="reading-num">阅读数：{$hits}</div>
+                    </div>
+                    <div class="article-content">
+                        {$content}
+                    </div>
+
+                    <div class="prev-next">
+                        <strong>上一篇：</strong>{if $prev_page}<a href="{$prev_page.url}">{$prev_page.title}</a>{else}没有了{/if}<br>
+                        <strong>下一篇：</strong>{if $next_page}<a href="{$next_page.url}">{$next_page.title}</a>{else}没有了{/if}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pz-navg">
+            <ul>
+                {category module=share pid=3}
+                <li><a class=" {if IS_SHARE && in_array($catid, $t.catids)} pz-navg-active {/if}" href="{$t.url}">{$t.name}</a>
+                </li>
+                {/category}
+        </div>
+    </div>
+</div>
+{template "footer.html"}
+
+

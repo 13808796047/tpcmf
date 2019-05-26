@@ -1,0 +1,58 @@
+﻿{template "header.html"}
+<link rel="stylesheet" href="{HOME_THEME_PATH}web/css/detail.css">
+<link rel="stylesheet" href="{HOME_THEME_PATH}web/css/style-3.css">
+<div style="background: #fff;">
+    <div id="pz-content" style="padding: 20px 0;">
+        <!-- 面包屑 -->
+        <ul class="breadcrumb bnav">
+            <li>
+                <a href="/warning">&nbsp;配资指数曝光</a>&nbsp;
+            </li>
+
+        </ul>
+        <div class="content-norrap">
+            <div class="norrap-left">
+                <div class="article-box">
+                    <div class="article-title">{$title}
+                        <div class="article-msg">{$inputtime}&nbsp;&nbsp;</div>
+                        <div class="reading-num">阅读数：{$hits}</div>
+                    </div>
+                    <h6 style="margin-top:15px;color: #444;font-size: 16px;font-weight: bold;line-height: 40px;display:inline-block">
+                        涉及平台：</h6>
+                    <!-- 涉及平台新增平台图标 -->
+                    <img style="display: inline-block;width: 28px;vertical-align: middle;" src="" alt="">
+                    <a target="_blank" style="color:rgb(249, 150, 59);display:inline-block;font-size:14px" href="">互盈策略
+                        / 趋势策略</a>
+
+                    <div class="yujingmiaoshu" style="padding-top:15px;padding-bottom:0;">
+                        <h6>配资描述：</h6>
+                        {$description}
+                    </div>
+
+
+                    {$content}
+
+                    <!-- 相关曝光 -->
+
+                    <div class="prev-next">
+                        <strong>上一篇：</strong>{if $prev_page}<a href="{$prev_page.url}">{$prev_page.title}</a>{else}没有了{/if}<br>
+                        <strong>下一篇：</strong>{if $next_page}<a href="{$next_page.url}">{$next_page.title}</a>{else}没有了{/if}
+                    </div>
+
+                </div>
+                <!--调用ajax评论-->
+                {if IS_COMMENT}
+                {dr_module_comment(MOD_DIR, $id)}
+                {/if}
+
+            </div>
+
+            {template "slide.html"}
+
+
+            <div class="clear_box"></div>
+        </div>
+    </div>
+</div>
+
+{template "footer.html"}
