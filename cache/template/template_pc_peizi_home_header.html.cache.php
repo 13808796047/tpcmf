@@ -13,7 +13,7 @@
     <script src="<?php echo THEME_PATH; ?>assets/layer/layer.js" type="text/javascript"></script>
     <script src="<?php echo THEME_PATH; ?>assets/js/cms.js" type="text/javascript"></script>
 <!--    <script type="text/javascript" src="<?php echo HOME_THEME_PATH; ?>web/js/jquery1.42.min_1.js"></script>-->
-
+    <link href="<?php echo THEME_PATH; ?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="<?php echo HOME_THEME_PATH; ?>web/js/jquery.superslide.2.1.1_1.js"></script>
     <script type="text/javascript" src="<?php echo HOME_THEME_PATH; ?>web/js/jquery.basictable.min_1.js"></script>
     <script type="text/javascript" defer="defer" src="<?php echo HOME_THEME_PATH; ?>web/js/common_1.js"></script>

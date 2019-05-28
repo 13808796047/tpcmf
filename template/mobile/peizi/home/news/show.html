@@ -1,0 +1,47 @@
+{template "header.html"}
+<link type="text/css" rel="stylesheet" href="{HOME_THEME_PATH}web/css/detail.css">
+<link type="text/css" rel="stylesheet" href="{HOME_THEME_PATH}web/css/style-3.css">
+
+<div style="background: #fff;">
+    <div id="pz-content" style="padding: 20px 0;">
+        <!-- 面包屑 -->
+        <ul class="breadcrumb bnav">
+            <li>
+                <a href="/post_list/4">&nbsp;配资动态</a>&nbsp;&gt;
+            </li>
+            <li>
+                <a href="javascript:;">&nbsp;期货配资有哪些特点？</a>
+            </li>
+        </ul>
+
+        <div class="content-norrap">
+            <div class="norrap-left">
+
+
+                <!--预警 列表 -->
+                <div class="article-box">
+                    <div class="article-title">{$title}
+                        <div class="article-msg">{$inputtime}&nbsp;&nbsp;<span class="article-author">作者：{$author}</span>
+                        </div>
+                        <div class="reading-num">阅读数：{$hits}</div>
+                    </div>
+                    <div class="article-content">
+                       {$content}
+                    </div>
+
+                    <div class="prev-next">
+                        <strong>上一篇：</strong>{if $prev_page}<a href="{$prev_page.url}">{$prev_page.title}</a>{else}没有了{/if}<br>
+                        <strong>下一篇：</strong>{if $next_page}<a href="{$next_page.url}">{$next_page.title}</a>{else}没有了{/if}
+                    </div>
+                </div>
+
+                <!-- 评论 -->
+
+            </div>
+            {template "slide.html"}
+            <div class="clear_box"></div>
+        </div>
+    </div>
+</div>
+
+{template "footer.html"}

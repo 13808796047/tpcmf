@@ -1,0 +1,21 @@
+{template "header.html"}
+<link rel="stylesheet" href="{HOME_THEME_PATH}web/css/detail.css">
+<link rel="stylesheet" href="{HOME_THEME_PATH}web/css/style-4.css">
+<div style="background: #fff;">
+    <div id="pz-content" style="padding: 20px 0;">
+                <div class="mingci-box">
+                    {$content}
+                </div>
+        <div class="pz-navg">
+            <ul>
+                {category module=share pid=3}
+                <li><a class=" {if IS_SHARE && in_array($catid, $t.catids)} pz-navg-active {/if}" href="{$t.url}">{$t.name}</a>
+                </li>
+                {/category}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{template "footer.html"}
+

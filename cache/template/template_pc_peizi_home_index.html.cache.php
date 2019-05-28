@@ -93,9 +93,9 @@
                 <?php } } ?>
                 </tbody>
             </table>
+
             <div class="handle-btn">
-               <?php print_r(dr_get_mform_post_value(MOD_DIR, 'peizipingtai',1)); ?>
-                <a href="" style="background: #56b0f2;margin-right: 16px;"
+                <a href='/index.php?s=form&c=joinus&m=post' style="background: #56b0f2;margin-right: 16px;"
                    class="btn-join">加入我们</a>
                 <a href="<?php echo dr_cat_value('plateform', 1, 'url'); ?>" style="background: #ff9000;"
                    class="btn-more">查看更多</a>

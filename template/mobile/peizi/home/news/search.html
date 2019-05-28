@@ -1,0 +1,70 @@
+
+{template "header.html"}
+<link type="text/css" rel="stylesheet" href="{HOME_THEME_PATH}web/css/detail.css">
+<link type="text/css" rel="stylesheet" href="{HOME_THEME_PATH}web/css/style-3.css">
+
+<div style="background: #fff;">
+    <div id="pz-content" style="padding: 20px 0;">
+        <!-- 面包屑 -->
+        <ul class="breadcrumb bnav">
+            <li>
+                <a href="zixun.html">&nbsp;配资指数观点</a>
+            </li>
+        </ul>
+        <div class="content-norrap">
+            <div class="norrap-left">
+                <img style="display:block;width:100%;margin-bottom: 20px;height: 93px;" alt="" src="http://www.peizizhishu.com/images/ad3.jpg" />
+
+
+                <!--预警 列表 -->
+                <ul class="viewpoint-list">
+                    {module catid=$catid order=updatetime page=1}
+                    <li>
+                        <a class="viewpoint-link" href="{$t.url}">
+                            <h4>{$t.title}</h4>
+                            <p>{$t.description}</p>
+                            <div class="viewpoint-time">{$t.author} • {$t.inputtime}</div>
+                            <div class="viewpoint-other">
+                                <span class="blue">{$t.hits}</span> 阅读
+                                • <span class="blue">{$t.comments}</span> 评论
+                            </div>
+                            <img class="viewpoint-img" src="{dr_thumb($t.thumb, 100, 90)}" width="103" height="103" />
+                        </a>
+                    </li>
+                    {/module}
+
+                </ul>
+                <!-- 分页 -->
+
+                <div style="margin-top: 40px;">
+                    <ul class="yema" role="navigation">
+
+                        <li class="pre-page" aria-disabled="true" aria-label="&laquo; Previous">
+                            <span aria-hidden="true">上一页</span>
+                        </li>
+
+
+
+
+                        <li class="yema-on" aria-current="page"><span>1</span></li>
+                        <li><a href="http://www.peizizhishu.com/post_list/7?page=2">2</a></li>
+                        <li><a href="http://www.peizizhishu.com/post_list/7?page=3">3</a></li>
+
+
+                        <li class="next-page">
+                            <a href="http://www.peizizhishu.com/post_list/7?page=2" rel="next" aria-label="Next &raquo;">下一页</a>
+                        </li>
+
+                        <div class="clear_box"></div>
+                    </ul>
+
+                </div>
+            </div>
+            {template "slide.html"}
+            <div class="clear_box"></div>
+        </div>
+    </div>
+</div>
+
+{template "footer.html"}
+

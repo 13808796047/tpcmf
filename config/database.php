@@ -5,9 +5,9 @@
  */
 
 $db['default']	= [
-    'hostname'	=> '127.0.0.1',
-    'username'	=> 'homestead',
-    'password'	=> 'secret',
-    'database'	=> 'tpcmf',
+    'hostname'	=> '211.159.184.214',
+    'username'	=> 'www_pzmws_com',
+    'password'	=> 'a8ewSzWeFrnrhizs',
+    'database'	=> 'www_pzmws_com',
     'DBPrefix'	=> 'dr_',
 ];

@@ -1,0 +1,51 @@
+﻿{template "header.html"}
+<link rel="stylesheet" href="{HOME_THEME_PATH}web/css/detail.css">
+<link rel="stylesheet" href="{HOME_THEME_PATH}web/css/style-3.css">
+<div style="background: #fff;">
+    <div id="pz-content" style="padding: 20px 0;">
+        <!-- 面包屑 -->
+        <ul class="breadcrumb bnav">
+            <li>
+                <a href="/post_list/7">&nbsp;配资指数观点</a>&nbsp;&gt;
+            </li>
+            <li>
+                <a href="javascript:;">&nbsp;股票配资欺诈平台，关于是否实盘最新狡辩说辞。</a>
+            </li>
+        </ul>
+
+        <div class="content-norrap">
+            <div class="norrap-left">
+
+<!--                <img style="display:block;width:100%;margin-bottom: 20px;height: 93px;" alt="" src="picture/ad3_1.jpg"/>-->
+
+                <!--预警 列表 -->
+                <div class="article-box">
+                    <div class="article-title">{$title}
+                        <div class="article-msg">{$inputtime}&nbsp;&nbsp;<span
+                                class="article-author">作者：{$author}</span></div>
+                        <div class="reading-num">阅读数：{$hits}</div>
+                    </div>
+                    <div class="article-content">
+                        {$content}
+                    </div>
+                    <div class="prev-next">
+                        <strong>上一篇：</strong>{if $prev_page}<a href="{$prev_page.url}">{$prev_page.title}</a>{else}没有了{/if}<br>
+                        <strong>下一篇：</strong>{if $next_page}<a href="{$next_page.url}">{$next_page.title}</a>{else}没有了{/if}
+                    </div>
+                </div>
+
+                <!-- 评论 -->
+                <!--调用ajax评论-->
+                {if IS_COMMENT}
+                {dr_module_comment(MOD_DIR, $id)}
+                {/if}
+
+
+            </div>
+            {template "slide.html"}
+            <div class="clear_box"></div>
+        </div>
+    </div>
+</div>
+
+{template "footer.html"}

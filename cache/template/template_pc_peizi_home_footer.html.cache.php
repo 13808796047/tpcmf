@@ -131,7 +131,7 @@
 
                 $(".input-prompt").html("<li>正在查询中...</li>");
                 $.ajax({
-                    url: "http://peizizhishu.com/search_refer",
+                    url: "/index.php?s=plateform&c=search&m=ajax_search&catid=1",
                     data: {
                         "wd": $('input[name="wd"]').val(),
                         "column": $('input[name="column"]').val()

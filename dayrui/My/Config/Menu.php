@@ -542,49 +542,49 @@ return [
 
 
 
-        'cloud' => [
-			'name' => '服务',
-            'icon' => 'fa fa-cloud',
-            'displayorder' => 99,
-            'left' => [
-                'cloud-dayrui' => [
-                    'name' => '网站管理',
-                    'icon' => 'fa fa-cloud',
-                    'link' => [
-                        [
-                            'name' => '我的网站',
-                            'icon' => 'fa fa-cog',
-                            'uri' => 'cloud/index',
-                        ],
-                        [
-                            'name' => '服务工单',
-                            'icon' => 'fa fa-user-md',
-                            'uri' => 'cloud/service',
-                        ],
-                        [
-                            'name' => '插件商城',
-                            'icon' => 'fa fa-puzzle-piece',
-                            'uri' => 'cloud/app',
-                        ],
-                        [
-                            'name' => '组件商城',
-                            'icon' => 'fa fa-plug',
-                            'uri' => 'cloud/func',
-                        ],
-                        [
-                            'name' => '模板商城',
-                            'icon' => 'fa fa-html5',
-                            'uri' => 'cloud/template',
-                        ],
-                        [
-                            'name' => '版本升级',
-                            'icon' => 'fa fa-refresh',
-                            'uri' => 'cloud/update',
-                        ],
-                    ]
-                ],
-            ],
-        ],
+//        'cloud' => [
+//			'name' => '服务',
+//            'icon' => 'fa fa-cloud',
+//            'displayorder' => 99,
+//            'left' => [
+//                'cloud-dayrui' => [
+//                    'name' => '网站管理',
+//                    'icon' => 'fa fa-cloud',
+//                    'link' => [
+//                        [
+//                            'name' => '我的网站',
+//                            'icon' => 'fa fa-cog',
+//                            'uri' => 'cloud/index',
+//                        ],
+//                        [
+//                            'name' => '服务工单',
+//                            'icon' => 'fa fa-user-md',
+//                            'uri' => 'cloud/service',
+//                        ],
+//                        [
+//                            'name' => '插件商城',
+//                            'icon' => 'fa fa-puzzle-piece',
+//                            'uri' => 'cloud/app',
+//                        ],
+//                        [
+//                            'name' => '组件商城',
+//                            'icon' => 'fa fa-plug',
+//                            'uri' => 'cloud/func',
+//                        ],
+//                        [
+//                            'name' => '模板商城',
+//                            'icon' => 'fa fa-html5',
+//                            'uri' => 'cloud/template',
+//                        ],
+//                        [
+//                            'name' => '版本升级',
+//                            'icon' => 'fa fa-refresh',
+//                            'uri' => 'cloud/update',
+//                        ],
+//                    ]
+//                ],
+//            ],
+//        ],
 
 
 

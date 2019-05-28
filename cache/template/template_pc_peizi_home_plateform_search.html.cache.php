@@ -114,7 +114,7 @@
         </tr>
         <?php } } ?>
         <?php if (!$count) { ?>
-        <tr>没有找到相关内容！</tr>
+        <tr><td>没有找到相关内容！</td></tr>
         <?php } ?>
         </tbody>
     </table>
